@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/forms.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <div class="form">
+        <div class="form__content">
+          <form method="post" class="form__form">
+            <div class="form__column">
+              <div class="form__username section">
+                <div class="section__title">Username</div>
+                <input name="username" id="username" class="section__input">
+              </div>
+  
+              <div class="form__password section">
+                <div class="section__title">Password</div>
+                <input name="password" id="password" class="section__input">
+              </div>
+              
+              <div class="form__repass section">
+                <div class="section__title">Repeat your password</div>
+                <input name="repass" id="repass" class="section__input">
+              </div>
+            </div>
+          </form>
+          <div class="form__switch">
+            <a href="http://localhost:3500/auth" class="form__link">Sign in</a>
+            <a href="http://localhost:3500/register" class="form__link">Registration</a>
+          </div>
+          <input type="button" value="Registration" id="btn1">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/register.js"></script>
+</body>
+</html>

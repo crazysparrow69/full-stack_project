@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+/*--------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 900px;
+	margin: 0px auto;
+}
+
+.menu {
+  font-family: 'Roboto', sans-serif;
+}
+
+.menu__row {
+  margin-top: 150px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 137, 59);
+}
+
+.menu__logo {
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+}
+
+.menu__links a{
+  font-size: 20px;
+  line-height: 40px;
+  text-decoration: underline;
+  color: blueviolet;
+  margin-right: 5px;
+}
+
+.info {
+  font-family: 'Roboto', sans-serif;
+}
+
+.info__row {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info__title {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.info__ul {
+  padding-left: 20px;
+}
+
+.info__ul li{
+  list-style-type: disc;
+}
+
+.info__create-new-note {
+  padding-top: 5px;
+}
+
+.info__create-new-note input{
+  height: 24px;
+  border: 1px solid black;
+  width: 75%;
+}
+
+.info__create-new-note button{
+  height: 24px;
+  border: 1px solid black;
+  width: 20%;
+}
