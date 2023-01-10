@@ -6,24 +6,24 @@ const SingletonFactory = (function(){
       div: document.getElementById('links'),
     };
   
-    createNote(data) {
+    #createNote(data) {
       const newLi = document.createElement('li');
       newLi.innerHTML = data;
       this.elements.ul.append(newLi);
     };
   
-    createUsername(username) {
+    #createUsername(username) {
       this.elements.title.innerHTML = username;
     };
   
-    createLogout() {
+    #createLogout() {
       const link = document.createElement('a');
       link.href = 'http://localhost:3500/logout';
       link.innerHTML = 'Logout';
       this.elements.div.append(link);
     };
   
-    deleteElementById(...idArray) {
+    #deleteElementById(...idArray) {
       idArray.forEach ( id => {
         const elem = document.getElementById(id);
         elem.remove();
@@ -77,10 +77,10 @@ const SingletonFactory = (function(){
         if (response.status === 401) return;
     
         const userData = await response.json();
-        this.createUsername(userData.username);
-        userData.notes.forEach( note => this.createNote(note));
-        this.deleteElementById('signIn', 'register');
-        this.createLogout();
+        this.#createUsername(userData.username);
+        userData.notes.forEach( note => this.#createNote(note));
+        this.#deleteElementById('signIn', 'register');
+        this.#createLogout();
     
       } catch (err) {
         console.error(err);
